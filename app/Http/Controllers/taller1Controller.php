@@ -6,7 +6,17 @@ use Illuminate\Http\Request;
 
 class taller1Controller extends Controller
 {
-    public function primo($num1, $num2){
-        
-    }
+    public function create(){
+
+
+        return view('formulario');
+  
+     }
+  
+     public function store(Request $request){
+  
+        return $request->num1;
+  
+  
+     }
 }
