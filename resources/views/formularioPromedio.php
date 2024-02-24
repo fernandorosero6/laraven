@@ -1,6 +1,6 @@
 <h1>Formulario promedio</h1>
 
-<form action="{{ route('promedio.store') }}" method="POST">
+<form action="{{ route('promedio.store') }}" method="POST" enctype="multipart/form-data">
 
 
 
