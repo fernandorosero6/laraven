@@ -10,13 +10,13 @@ class taller1Controller extends Controller
 
 
         return view('formulario');
-  
+
      }
-  
+
      public function store(Request $request){
-  
+
         return $request->num1;
-  
-  
+
+
      }
 }

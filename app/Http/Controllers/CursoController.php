@@ -12,7 +12,7 @@ class CursoController extends Controller
 
     }
 
-   
+
 
     public function store(Request $request)
     {
@@ -39,16 +39,14 @@ class CursoController extends Controller
         return true;
     }
 
-//Numeros amigos 
+//Numeros amigos
 
-public function amigoCreate()
-{
-    return view('FormularioAmigo');
+    public function amigoCreate()
+    {
+        return view('FormularioAmigo');
+    }
 
-}
-
-
-public function amigisStore(Request $request)
+    public function amigisStore(Request $request)
 {
     $num1 = $request->num1;
     $num2 = $request->num2;
@@ -60,28 +58,35 @@ public function amigisStore(Request $request)
     }
 }
 
-private function sumDivisores($numero)
-{
-    $sum = 0;
-    for ($i = 1; $i <= $numero / 2; $i++) {
-        if ($numero % $i == 0) {
-            $sum += $i;
+    private function sumDivisores($numero)
+    {
+        $sum = 0;
+        for ($i = 1; $i <= $numero / 2; $i++) {
+            if ($numero % $i == 0) {
+                $sum += $i;
+            }
         }
+        return $sum;
     }
-    return $sum;
-}
 
-public function promedioCreate()
+    // metodo para sacar promedio de notas
+
+    public function promedioCreate()
 {
     return view('formularioPromedio');
+}
+public function promedioStore(Request $request)
+{
+    // Obtener las notas del formulario
+    $nota1 = $request->input('num1');
+    $nota2 = $request->input('num2');
+    $nota3 = $request->input('num3');
 
+    // Calcular el promedio
+    $promedio = ($nota1 + $nota2 + $nota3) / 3;
+
+    // Retornar el resultado
+    return "El promedio de las notas ingresadas es: $promedio";
 }
 
-// Método para mostrar el formulario de ingreso de notas
-
-
-// Método para procesar el cálculo del promedio de notas
-
-
 }
-    

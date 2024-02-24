@@ -24,7 +24,7 @@ Route::post('/curso',[CursoController::class,'store'])->name('curso.store');
 
 //Formularioamigo
 Route::get('/amigo',[CursoController::class,'amigoCreate']);
-Route::post('/amigo/verificar-amigo',[CursoController::class,'amigisStore'])->name('amigo.store');
+Route::post('/amigo/verificar-amigo', [CursoController::class, 'amigisStore'])->name('amigo.store');
 
 Route::get('/promedio',[CursoController::class,'promedioCreate']);
-Route::post('/promedio',[CursoController::class,'promedioStore'])->name('amigo.store');
+Route::post('/promedio/verificar-promedio', [CursoController::class, 'promedioStore'])->name('promedio.store');
