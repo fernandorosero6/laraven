@@ -69,24 +69,27 @@ class CursoController extends Controller
         return $sum;
     }
 
+
+
+
     // metodo para sacar promedio de notas
 
-    public function promedioCreate()
-{
+ public function promedioCreate(){
     return view('formularioPromedio');
-}
-public function promedioStore(Request $request)
-{
-    // Obtener las notas del formulario
-    $nota1 = $request->input('num1');
-    $nota2 = $request->input('num2');
-    $nota3 = $request->input('num3');
+ }
 
-    // Calcular el promedio
-    $promedio = ($nota1 + $nota2 + $nota3) / 3;
-
-    // Retornar el resultado
-    return "El promedio de las notas ingresadas es: $promedio";
-}
+ public function promedioStore(Request $request)
+ {
+     // Obtener las notas del formulario
+     $nota1 = $request->input('numero1');
+     $nota2 = $request->input('numero2');
+     $nota3 = $request->input('numero3');
+ 
+     // Calcular el promedio
+     $promedio = ($nota1 + $nota2 + $nota3) / 3;
+ 
+     // Retornar el resultado
+     return "El promedio de las notas ingresadas es: $promedio";
+ }
 
 }

@@ -27,4 +27,18 @@ Route::get('/amigo',[CursoController::class,'amigoCreate']);
 Route::post('/amigo/verificar-amigo', [CursoController::class, 'amigisStore'])->name('amigo.store');
 
 Route::get('/promedio',[CursoController::class,'promedioCreate']);
-Route::post('/promedio/verificar-promedio', [CursoController::class, 'promedioStore'])->name('promedio.store');
+Route::post('/promedio', [CursoController::class, 'promedioStore'])->name('promedio.store');
+
+
+
+
+
+Route::get('hola', function(){
+    return "Hola gente de youtube";
+});
+
+Route::get('ejemplo/{num1}/{num2}', function($num1, $num2){
+    return ($num1 + $num2)/2;
+});
+
+
