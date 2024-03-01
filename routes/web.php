@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// route::get('/curso/{dato}/{dato2}', [taller1Controller:: class, 'primo'])->name('curso.show');
+route::get('/curso/{dato}/{dato2}', [taller1Controller:: class, 'primo'])->name('curso.show');
 Route::get('/curso',[CursoController::class,'create']);
 Route::post('/curso',[CursoController::class,'store'])->name('curso.store');
 
@@ -28,6 +29,15 @@ Route::post('/amigo/verificar-amigo', [CursoController::class, 'amigisStore'])->
 
 Route::get('/promedio',[CursoController::class,'promedioCreate']);
 Route::post('/promedio', [CursoController::class, 'promedioStore'])->name('promedio.store');
+
+Route::get('/producto', [ProductController::class, 'productoCreate']);
+Route::post('/producto', [ProductController::class, 'productoStore'])->name('product.store');
+
+//rutas tarea tablas
+Route::get('/car', [CarController::class, 'carCreate']);
+Route::post('/car', [CarController::class, 'carStore'])->name('car.store');
+
+
 
 
 

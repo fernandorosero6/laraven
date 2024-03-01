@@ -1,6 +1,7 @@
+
 <h1>Formulario promedio</h1>
 
-<form action="{{ route('promedio.store') }}" method="POST">
+<form action="{{route('promedio.store') }}" method="POST">
     @csrf
     <label>
         Ingrese la nota 1:
