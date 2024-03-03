@@ -12,8 +12,6 @@ class CursoController extends Controller
 
     }
 
-
-
     public function store(Request $request)
     {
         $numero = $request->num1;
@@ -25,6 +23,8 @@ class CursoController extends Controller
         } else {
             return "El número $numero no es primo";
         }
+        
+
     }
     private function esPrimo($numero)
     {

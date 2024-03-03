@@ -5,6 +5,7 @@ use App\Http\Controllers\CarController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\PrimoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,11 @@ Route::post('/car', [CarController::class, 'carStore'])->name('car.store');
 
 Route::get('/player', [PlayerController::class, 'playerCreate']);
 Route::post('/player', [PlayerController::class, 'playerStore'])->name('player.store');
+
+//primo guardar 
+
+Route::get('/primo', [PrimoController::class, 'primoCreate'])->name('primo.create');
+Route::post('/primo', [PrimoController::class, 'primoStore'])->name('primo.store');
 
 
 
