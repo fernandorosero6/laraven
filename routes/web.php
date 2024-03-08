@@ -1,7 +1,8 @@
 <?php
 
-
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\CuadraticaController;
+use App\Http\Controllers\NavController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\PlayerController;
@@ -44,12 +45,19 @@ Route::post('/car', [CarController::class, 'carStore'])->name('car.store');
 Route::get('/player', [PlayerController::class, 'playerCreate']);
 Route::post('/player', [PlayerController::class, 'playerStore'])->name('player.store');
 
-//primo guardar 
+//primo guardar
 
 Route::get('/primo', [PrimoController::class, 'primoCreate'])->name('primo.create');
 Route::post('/primo', [PrimoController::class, 'primoStore'])->name('primo.store');
 
+// nav primo
 
+Route::get('/nav',[NavController::class, 'navCreate'])->name('nav.create');
+Route::post('/nav',[NavController::class, 'navStore'])->name('nav.store');
+
+//nav cuadratica
+Route::get('/cuadratica', [CuadraticaController::class, 'cuadraticaCreate'])->name('cuadratica.create');
+Route::post('/cuadratica', [CuadraticaController::class, 'cuadraticaStore'])->name('cuadratica.store');
 
 
 
