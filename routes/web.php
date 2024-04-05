@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CuadraticaController;
+use App\Http\Controllers\LavCursoController;
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CursoController;
@@ -59,6 +60,10 @@ Route::post('/nav',[NavController::class, 'navStore'])->name('nav.store');
 Route::get('/cuadratica', [CuadraticaController::class, 'cuadraticaCreate'])->name('cuadratica.create');
 Route::post('/cuadratica', [CuadraticaController::class, 'cuadraticaStore'])->name('cuadratica.store');
 
+//insersion de data en pdf
+Route::get('/LavCurso',[LavCursoController::class, 'LavCursoCreate']);
+Route::post('/LavCurso',[LavCursoController::class, 'LavCursoStore'])->name('LavCurso.store');
+Route::get('cursos/listar',[LavCursoController::class,'index'])->name('index');
 
 
 
