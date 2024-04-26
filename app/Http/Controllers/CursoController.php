@@ -23,7 +23,7 @@ class CursoController extends Controller
         } else {
             return "El número $numero no es primo";
         }
-        
+
 
     }
     private function esPrimo($numero)
@@ -70,8 +70,6 @@ class CursoController extends Controller
     }
 
 
-
-
     // metodo para sacar promedio de notas
 
  public function promedioCreate(){
@@ -84,12 +82,15 @@ class CursoController extends Controller
      $nota1 = $request->input('numero1');
      $nota2 = $request->input('numero2');
      $nota3 = $request->input('numero3');
- 
+
      // Calcular el promedio
      $promedio = ($nota1 + $nota2 + $nota3) / 3;
- 
+
      // Retornar el resultado
      return "El promedio de las notas ingresadas es: $promedio";
  }
+
+     // 
+
 
 }

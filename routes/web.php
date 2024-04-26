@@ -63,9 +63,10 @@ Route::post('/cuadratica', [CuadraticaController::class, 'cuadraticaStore'])->na
 //insersion de data en pdf
 Route::get('/LavCurso',[LavCursoController::class, 'LavCursoCreate']);
 Route::post('/LavCurso',[LavCursoController::class, 'LavCursoStore'])->name('LavCurso.store');
-Route::get('cursos/listar',[LavCursoController::class,'index'])->name('index');
+Route::get('/cursos/listar',[LavCursoController::class,'index'])->name('index');
 
-
+// Route::get('/cursos/listar',[CursoController::class,'index'])->name('curso.index');
+// Route::delete('curso/{curso}',[CursoController::class,'destroy'])->name('curso.destroy');
 
 
 Route::get('hola', function(){
