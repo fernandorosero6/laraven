@@ -70,7 +70,7 @@ Route::get('/cursos/listar',[LavCursoController::class,'index'])->name('index');
 
 
 Route::get('hola', function(){
-    return "Hola gente de youtube";
+    return "Hola gente de youtube"; 
 });
 
 Route::get('ejemplo/{num1}/{num2}', function($num1, $num2){
